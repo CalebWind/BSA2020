@@ -23,10 +23,14 @@ else
 exit 1
 fi
 
-echo "Please enter the username of the remote location: " username
-echo "Please enter the IP of the remote location: " ip
-echo "Please enter the port of the remote location: " port
-echo "Where would you like to save the backup: " buplocation
+echo "Please enter the username of the remote location: "
+read $username
+echo "Please enter the IP of the remote location: "
+read $ip
+echo "Please enter the port of the remote location: "
+read $port
+echo "Where would you like to save the backup: "
+read $buplocation
 
 while [[ ! -d $buplocation  ]]
 	echo "Not a directory, please enter a directory"
